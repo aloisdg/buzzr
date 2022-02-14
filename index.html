@@ -24,18 +24,25 @@
 
       body {
         display: grid;
-        grid-template-rows: auto 1fr 24px;
+        grid-template-rows: auto 1fr auto 24px;
       }
 
       button {
         height: 100%;
         width: 100%;
       }
+
+      footer {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <h1>🤖 Buzzr</h1>
+    <header><h1>🤖 Buzzr</h1></header>
     <button onclick="buzz();">Buzz</button>
+    <footer>
+      made with ❤️ by <a href="https://github.com/d-edge/">D-EDGE</a>
+    </footer>
 
     <!-- Free sound by Mrthenoronha
           available on https://freesound.org/people/Mrthenoronha/sounds/519630/
