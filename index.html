@@ -1,32 +1,54 @@
-<title>Buzzr</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Buzzr</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 115 115%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
 
-<style>
+    <style>
+      html,
+      body {
+        height: 100%;
+        box-sizing: border-box;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
 
-html, body { height: 100%; box-sizing: border-box; margin-top: 0; margin-bottom: 0; }
-body {
-	display: grid;
-	grid-template-rows: auto 1fr 24px;
-}
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr 24px;
+      }
 
-button {
-  height: 100%;
-  width: 100%;
-}
-</style>
-<body>
-<h1>
-🤖 Buzzr
-</h1>
-<button onclick="buzz();">
-Buzz
-</button>
+      button {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🤖 Buzzr</h1>
+    <button onclick="buzz();">Buzz</button>
 
-</body>
+    <!-- Free sound by Mrthenoronha
+          available on https://freesound.org/people/Mrthenoronha/sounds/519630/
+          published under CC BY-NC 3.0
+    -->
+    <script>
+      const audio = new Audio(
+        "https://freesound.org/data/previews/519/519630_2402876-lq.mp3"
+      );
 
-<script>
-function buzz(){
-    const audio = new Audio("https://freesound.org/data/previews/519/519630_2402876-lq.mp3");
-    audio.play();
-}
-</script>
+      function buzz() {
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
